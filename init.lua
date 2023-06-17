@@ -1,2 +1,10 @@
-local path = minetest.get_modpath("nssm")
-dofile(path.."/fruits_ores.lua")
+nssf = {}
+local mod = nssf
+
+mod.version = '20180720'
+mod.mod_name = minetest.get_current_modname()
+mod.path = minetest.get_modpath(mod.mod_name)
+mod.world = minetest.get_worldpath()
+mod.dat = {}
+
+dofile(mod.path.."/fruits_ores.lua")
